@@ -2,3 +2,4 @@ bardapi
 flask
 python-dotenv
 gunicorn
+langdetect
