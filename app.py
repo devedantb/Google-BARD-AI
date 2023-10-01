@@ -6,16 +6,14 @@ from dotenv import load_dotenv
 load_dotenv()
 def create_app():
     app = Flask(__name__)
-    # def get_token():
-    #     try:
-    #         token = os.getenv("BARD_TOKEN")
-    #         bard = Bard(token=token)
-    #         return bard
-    #     except:
-    #         return ('We are facing some connectivity issues. Please try again after some time')
-    # bard = get_token()
-    token = os.getenv("BARD_TOKEN")
-    bard = Bard(token=token)
+    def get_token():
+        try:
+            token = os.getenv("BARD_TOKEN")
+            bard = Bard(token=token)
+            return bard
+        except:
+            return ('We are facing some connectivity issues. Please try again after some time')
+    bard = get_token()
     @app.route("/", methods=["GET", "POST"])
     def home():
         try:
