@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+    <h1><span style="color: brown;">Vedant's</span> <span style="color: aqua;">AI</span></h1>
+    
+    <form action="{{url_for('home')}}" method="POST">
+        <!-- <label for="userInput">Enter something:</label> -->
+        <input type="text" id="userInput" name="question" class="user-input" placeholder="Ask me anything">
+        <input type="submit" value="Submit" class="submit-button">
+    </form>
+    
+    {% if isResult %}
+    <!-- Add a "Copy" button -->
+    <button id="copyButton" onclick="copyToClipboard()">Click here to copy below content</button>
+    <div id="output" class="output-box">
+        <pre class="result">
+            {{result}}
+        </pre>
+    </div>
+    
+        
+    {%endif%}
+    <script>
+        function copyToClipboard() {
+            /* Get the text from the <pre> element */
+            var textToCopy = document.querySelector('#output pre').textContent;
+    
+            /* Create a temporary textarea element to hold the text */
+            var tempTextArea = document.createElement('textarea');
+            tempTextArea.value = textToCopy;
+            document.body.appendChild(tempTextArea);
+    
+            /* Select and copy the text */
+            tempTextArea.select();
+            document.execCommand('copy');
+    
+            /* Remove the temporary textarea element */
+            document.body.removeChild(tempTextArea);
+    
+            /* Provide user feedback (optional) */
+            alert('Copied to clipboard: ' + textToCopy);
+        }
+    </script>
+</body>
+</html>

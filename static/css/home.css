@@ -1,0 +1,105 @@
+/* styles.css */
+
+/* Apply some basic styles to the body and header */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #000000;
+    color: #ff000077;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Style the form */
+form {
+    background-color: #000000;
+    box-shadow: 0 0 10px rgba(33, 32, 32, 0);
+    height: 25%;
+    margin: 0 auto;
+}
+
+/* Style form labels */
+label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Style form input fields */
+input[type="text"],
+textarea {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    margin-bottom: 55px;
+    min-height: 100px;
+}
+.user-input {
+    width:max-content;
+    padding: 10px;
+    font-size: 16px;
+    display: block;
+    margin: 10px auto;
+}
+
+.submit-button {
+    background-color: #ff0000aa;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor:pointer;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+/* Style the output div */
+.output-box {
+    margin-left: 50px;
+    margin-right: 40px;
+    margin-bottom: 50px;
+    font-size: 18px;
+    background-color:black ;
+    color: white;
+    border: #ccc;
+    border: 1px solid #285e80;
+
+}
+
+.result{
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+#output {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Ensure text wraps inside the pre element */
+#output pre {
+    white-space: pre-wrap;
+}
+
+/* Style the "Copy" button */
+#copyButton {
+    background-color: hsl(214, 100%, 31%);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
+    text-align: right;
+}
