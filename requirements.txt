@@ -1,4 +1,5 @@
 bard
+bardapi
 flask
 python-dotenv
 gunicorn
