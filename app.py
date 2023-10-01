@@ -29,4 +29,4 @@ def home():
         else:
             return render_template("home.html")
     except:
-        return 'We are faving some connectivity issues. Please try again after some time'
+        return 'We are facing some connectivity issues. Please try again after some time'
